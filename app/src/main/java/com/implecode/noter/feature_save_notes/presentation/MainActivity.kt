@@ -1,9 +1,9 @@
-package com.implecode.noter
+package com.implecode.noter.feature_save_notes.presentation
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import com.implecode.noter.ui.theme.NoterTheme
+import com.implecode.noter.feature_save_notes.presentation.ui.theme.NoterTheme
 
 class MainActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
