@@ -1,4 +1,4 @@
-package com.implecode.noter.ui.theme
+package com.implecode.noter.feature_save_notes.presentation.ui.theme
 
 import androidx.compose.material.Typography
 import androidx.compose.ui.text.TextStyle
