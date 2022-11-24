@@ -14,5 +14,6 @@ data class NoteEntity(
     val title: String,
     val desc: String,
     val isPinned: Boolean,
-    val category: String
+    val category: String,
+    val isSynced: Boolean = false
 )

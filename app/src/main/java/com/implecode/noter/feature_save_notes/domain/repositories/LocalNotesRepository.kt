@@ -10,6 +10,10 @@ interface LocalNotesRepository {
     suspend fun insertNote(note: NoteEntity)
 
     /**
+     * Inserting notes in bulk*/
+    suspend fun insertNotes(notes:List<NoteEntity>)
+
+    /**
      * Deleting a note*/
     suspend fun deleteNote(note: NoteEntity)
 

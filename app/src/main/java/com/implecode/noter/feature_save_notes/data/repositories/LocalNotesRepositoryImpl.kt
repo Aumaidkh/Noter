@@ -13,6 +13,10 @@ class LocalNotesRepositoryImpl @Inject constructor(
         dao.insertNote(note)
     }
 
+    override suspend fun insertNotes(notes: List<NoteEntity>) {
+        dao.insertNotes(notes)
+    }
+
     override suspend fun deleteNote(note: NoteEntity) {
         dao.deleteNote(note)
     }

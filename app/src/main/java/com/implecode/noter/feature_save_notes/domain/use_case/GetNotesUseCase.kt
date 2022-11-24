@@ -6,5 +6,5 @@ import kotlinx.coroutines.flow.Flow
 
 interface GetNotesUseCase {
 
-    fun execute(): Flow<Resource<List<NoteEntity>>>
+    fun execute(userId: String): Flow<Resource<List<NoteEntity>>>
 }
