@@ -22,6 +22,11 @@ interface NotesDao {
      * 3. Fetch All Notes
      * */
     @Query("SELECT * FROM notes_table")
-    fun getAllNotes(): Flow<List<NoteEntity>>
+    fun getAllNotes(): List<NoteEntity>
+
+    /**
+     * 4. Insert Notes In Bulk*/
+    @Insert(onConflict = OnConflictStrategy.REPLACE)
+    suspend fun insertNotes(notes: List<NoteEntity>)
 
 }

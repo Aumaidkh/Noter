@@ -10,12 +10,17 @@ interface NotesRepository {
     suspend fun insertNote(note: NoteEntity)
 
     /**
+     * Insert notes in bulk
+     * */
+    suspend fun insertNotes(notes: List<NoteEntity>)
+
+    /**
      * Deleting a note*/
     suspend fun deleteNote(note: NoteEntity)
 
     /**
      * Fetching all notes
      * */
-    fun getAllNotes(): Flow<List<NoteEntity>>
+    fun getAllNotes(): List<NoteEntity>
 
 }

@@ -14,11 +14,15 @@ class NotesRepositoryImpl @Inject constructor(
         dao.insertNote(note)
     }
 
+    override suspend fun insertNotes(notes: List<NoteEntity>) {
+        dao.insertNotes(notes)
+    }
+
     override suspend fun deleteNote(note: NoteEntity) {
         dao.deleteNote(note)
     }
 
-    override fun getAllNotes(): Flow<List<NoteEntity>> {
+    override fun getAllNotes(): List<NoteEntity> {
         return dao.getAllNotes()
     }
 
