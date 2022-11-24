@@ -1,8 +1,8 @@
 package com.implecode.noter.feature_save_notes.di
 
 import com.implecode.noter.feature_save_notes.data.local.NotesDatabase
-import com.implecode.noter.feature_save_notes.data.repositories.NotesRepositoryImpl
-import com.implecode.noter.feature_save_notes.domain.repositories.NotesRepository
+import com.implecode.noter.feature_save_notes.data.repositories.LocalNotesRepositoryImpl
+import com.implecode.noter.feature_save_notes.domain.repositories.LocalNotesRepository
 import dagger.Module
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
@@ -14,10 +14,10 @@ object RepositoryModule {
     /**
      * Notes Repository
      * */
-    fun providesNotesRepository(
+    fun providesLocalNotesRepository(
         db: NotesDatabase
-    ): NotesRepository {
-        return NotesRepositoryImpl(
+    ): LocalNotesRepository {
+        return LocalNotesRepositoryImpl(
             dao = db.getNotesDao()
         )
     }
